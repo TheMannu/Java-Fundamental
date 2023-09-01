@@ -1,0 +1,16 @@
+package Loops;
+
+import java.util.Scanner;
+
+public class PrinTable {
+    public static void main(String[] args) {
+          
+        Scanner input = new Scanner(System.in);
+        System.out.println("Input The number for Table");
+        int n = input.nextInt();
+        input.close();
+        for (int i = 1; i<=10; i++){
+            System.out.println(i*n);
+        }
+    }
+}
