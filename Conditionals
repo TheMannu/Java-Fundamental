@@ -1,1 +1,21 @@
+1 . 'if - else'
+The if else block is used to specify the code to be executed if the condition specified in it is true otherwise the else block is executed. 
+Example:-
 
+import java.util.Scanner;
+public class ifElse{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println(" Please enter the Age ");
+        int age = sc.nextInt();
+        sc.close();
+        if (age > 18) {
+            System.out.println("This is an Adult");
+        } else {
+            System.out.println("This is not an adult");
+        }
+    }
+}
+
+2. 'Switch' 
+Switch case statements are substitute 
