@@ -1,0 +1,19 @@
+package Patterns;
+import java.util.*;
+public class Square{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the number of Rows");
+        int row = input.nextInt();
+        System.out.println("Enter the number of columns");
+        int column= input.nextInt();
+        input.close();
+        for(int i=1; i<=row; i++){
+            for(int j=1; j<=column; j++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+}
+
