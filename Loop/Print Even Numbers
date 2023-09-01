@@ -1,1 +1,19 @@
+//Print All Even numbers present till N
+package Loops;
+
+import java.util.Scanner;
+
+public class PrintEvenNumber {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Please Input the uper the Upper Limit");
+        int n = input.nextInt();
+        input.close();
+        for (int i = 1; i<=n; i++){
+            if (i%2 == 0){
+                System.out.println(i);
+            }
+        }
+    }
+}
 
