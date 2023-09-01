@@ -1,0 +1,28 @@
+//Print if the number is prime or not take input from user
+
+package Loops;
+import java.util.*;
+public class CheckPrimeNumber{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Please Entr the number To check Prime Number");
+        int number = input.nextInt();
+        input.close();
+        boolean prime= true;
+        for (int i=2; i<=number/2; i++){
+            if (number%i ==0 ){
+                prime = false;
+                break;
+            }
+        }
+        if ( prime){
+            if(number==1){
+                System.out.println("This is neither prime number nor composit number");
+            } else {
+                System.out.println("This is prime Number");
+            }
+        }else {
+            System.out.println("This is Not Prime Number");
+        }
+    }
+}
