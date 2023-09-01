@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+//Make a Calculator. Take 2 numbers (a & b) from the user and an operation. Calculate the result according to the operation given and display it to the user.
+
+public class Calculator {
+    public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+      System.out.println(" Enter the value of a");
+      int a = sc.nextInt();
+      System.out.println(" ENter the value of b");
+      int b = sc.nextInt();
+      System.out.println("Please select the operator");
+      System.out.println("1 = Addition");
+      System.out.println("2 = Subtraction");
+      System.out.println("3 = Multiplication");
+      System.out.println("4 = Division");
+      System.out.println("5 = Modulus");
+      int operation = sc.nextInt();
+      sc.close();
+    switch(operation){
+      case 1: System.out.println(a+b);
+        break;
+      case 2: System.out.println(a-b);
+        break;
+      case 3: System.out.println(a*b);
+        break;
+      case 4 : if(b==0){System.out.println("Invalid Division");
+                } else {System.out.println( a/b);}
+        break;
+      case 5: if(b==0){System.out.println("Invalid Division");
+                } else {System.out.println(a%b);}
+        break; 
+    default: System.out.println("Invalid Operator");
+    }
+  }
+}
