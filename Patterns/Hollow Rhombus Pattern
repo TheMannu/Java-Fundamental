@@ -1,0 +1,28 @@
+package Patterns;
+
+import java.util.Scanner;
+
+public class HollowRombus {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the value of N");
+        int n =input.nextInt();
+        input.close();
+        //outer loop for number of row
+        for(int i=n; i>=1; i--){
+            //inner loop for printing spaces before star in decreasing order
+            for(int j=1; j<=i; j++){
+                System.out.print("  ");
+            }
+            for(int j=1; j<=n; j++){
+                //condition for star printing and spaces
+                if(j==1 || j==n  || i==1 || i==n){
+                System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
