@@ -1,0 +1,31 @@
+package Patterns;
+
+import java.util.Scanner;
+
+public class HollowRectangle {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Enter the number of rows");
+        int row = input.nextInt();
+
+        System.out.println("Enter the number of columns");
+        int column = input.nextInt();
+
+        input.close();
+
+        //outer loop for rows 
+        for (int i=1; i<=row; i++){
+            //inner loop for columns
+            for (int j=1; j<=column; j++){
+                if( i == 1 || j == 1 || i == row || j == column) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+    
+    }
+}
