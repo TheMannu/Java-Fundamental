@@ -1,0 +1,19 @@
+package Functions;
+
+import java.util.Scanner;
+
+public class Multiplication {
+    public static int multiply (int a, int b){
+        return a*b;
+    }
+    public static void main(String[] args) {
+        Scanner input =new Scanner(System.in); 
+        int a = input.nextInt();
+        int b = input.nextInt();
+        input.close();
+
+        // int result = multiply(a, b);
+        // System.out.println("Multiplication of given Numbers is: "+result);
+        System.out.println("Multiplication of given Numbers is: " + multiply(a, b));
+    }
+}
