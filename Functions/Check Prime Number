@@ -1,0 +1,32 @@
+package Functions;
+
+import java.util.Scanner;
+
+public class PrimeNumber {
+    public static void checkPrime(int number){
+        boolean prime= true;
+        for (int i=2; i<=number/2; i++){
+            if (number%i ==0 ){
+                prime = false;
+                break;
+            }
+        }
+        if ( prime){
+            if(number==1){
+                System.out.println("This is neither prime number nor composit number");
+            } else {
+                System.out.println("This is prime Number");
+            }
+        }else {
+            System.out.println("This is Not Prime Number");
+        }
+    }
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter Number to check Prime or Not");
+        int number = input.nextInt();
+        input.close();
+
+        checkPrime(number);
+    }
+}
