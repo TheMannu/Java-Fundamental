@@ -1,0 +1,23 @@
+package Functions;
+
+import java.util.Scanner;
+
+public class circleCircumference {
+    public static Double printcircumference (Double radius){
+        //  float circumstances = 2 * 3.14f * radius;
+        //  System.out.println("The Circumference of Given Radius : "+circumstances);
+        //  return;
+
+        return 2 * 3.14 * radius;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter The Radius");
+        Double radius = sc.nextDouble();
+        sc.close();
+
+        //printcircumference(radius);
+        
+        System.out.println("Circumference is : " + printcircumference(radius));
+    }
+}
