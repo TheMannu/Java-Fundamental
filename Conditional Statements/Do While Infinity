@@ -1,0 +1,16 @@
+package Functions;
+
+public class infinityDoWhile {
+    public static void printInfinity(int n){
+        do{
+            System.out.println(n);
+        } while ( 0 <= n );
+
+        // do {
+        //} while(true);
+    }
+    public static void main(String[] args) { 
+         int n = 0;
+        printInfinity(n);
+    }
+}
