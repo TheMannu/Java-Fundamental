@@ -1,0 +1,22 @@
+package Functions;
+
+import java.util.Scanner;
+
+public class EligibilityTest {
+    public static void printEligiblity(int age){
+        if ( age > 18){
+            System.out.println("Eligible to Vote : ");
+        } else {
+            System.out.println("Not Eligible To Vote : ");
+        }
+         return;
+    }
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter Age of The Preson ");
+        int age = sc.nextInt();
+        sc.close();
+
+        printEligiblity(age);
+    }
+}
