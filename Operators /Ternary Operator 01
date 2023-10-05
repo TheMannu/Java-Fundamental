@@ -1,0 +1,14 @@
+package Operators;
+
+import java.util.Scanner;
+
+public class TernaryOperator {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Your Number");
+        int number = sc.nextInt();
+        sc.close();
+        String type = ((number % 2 ) == 0 ) ? "Given number is Even " : "Given number is Odd" ;
+        System.out.println(type);
+    }
+}
