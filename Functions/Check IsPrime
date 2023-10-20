@@ -1,0 +1,30 @@
+package Functions;
+
+public class CheckPrime {
+    public static boolean isPrime (int n) {
+        boolean isPrime = true;
+        for (int i = 2; i<=n-1; i++) {
+            if (n % i == 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        return isPrime;
+    }
+    //only for n >= 2 
+    public static boolean isPrime1 (int n) {
+        if (n == 2){  // corner cases
+            return true;
+        }
+        for (int i = 2; i<=n/2 ; i++) { 
+            if (n % i == 0) {  //completely dividing
+                return false;
+            }
+        }
+        return true;
+    }
+    public static void main(String[] args) {
+        System.out.println(isPrime(12));
+        System.out.println(isPrime1(5));
+    }
+}
