@@ -1,0 +1,25 @@
+package Functions;
+
+public class BinomialCoefficient {
+
+    public static int Factorial(int n) {
+        int fact = 1;
+        for(int i=1; i<=n; i++) {
+            fact = fact * i;
+        }
+        return fact; 
+    }
+
+    public static int BinomCoff(int n, int r) {
+        int fact_n = Factorial(n);  //functon calling for finding factorial
+        int fact_r = Factorial(r);
+        int fact_nmr = Factorial(n-r);  
+        int BinCoff = fact_n / (fact_r * fact_nmr); 
+        
+        return BinCoff;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(BinomCoff(5, 2)); // function calling for binomial coefficient
+    }
+}
