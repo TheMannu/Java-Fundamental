@@ -1,0 +1,33 @@
+package Functions;
+
+import java.util.Scanner;
+
+public class CheckPalindrome {
+    public static boolean isPalindrome(int Number) {
+        int palindrome = Number;
+        int reverse = 0;
+
+        while (palindrome != 0) {
+            int remainder = palindrome % 10;
+            reverse = reverse * 10 + remainder;
+            palindrome = palindrome / 10;
+        }
+        if (Number == reverse) {
+            return true;
+        } 
+        return false;
+    }
+    public static void main(String[] args) {
+        System.out.println("Please Enter A Number : ");
+        Scanner sc = new Scanner(System.in);
+        int palindrome = sc.nextInt();
+        sc.close();
+
+        if (isPalindrome(palindrome)) {
+            System.out.println("Number : "+ palindrome + " is a Palindrome");
+        } else {
+            System.out.println("Number : "+ palindrome + " is NOT a Palindrome");
+        }
+    }
+    
+}
