@@ -1,0 +1,19 @@
+package Arrays;
+
+public class ArraysUpdate { 
+    public static void update (int marks[]){
+        for (int  i = 0; i < marks.length; i++){
+            marks[i] = marks[i] + 2;  
+        }
+    }
+    public static void main(String[] args) {
+        int marks[] = {70,80,90};
+        update(marks);
+
+        //print our marks 
+        for(int i=0; i<marks.length; i++) {
+            System.out.println(marks[i] + " ");
+        }
+        System.out.println();
+    }
+}
