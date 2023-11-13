@@ -1,0 +1,21 @@
+package Arrays;
+
+public class MaxSubarraySumN1 {
+    public static void kadanes (int number[]) {
+        int maxSm = Integer.MIN_VALUE;
+        int currSm = 0;
+
+        for(int i = 0; i < number.length; i++) {
+            currSm = currSm + number[i];
+            if (currSm < 0) {
+                currSm = 0;
+            }
+            maxSm = Math.max(currSm,maxSm);
+        }
+        System.out.println("Our Max subarray Sum : " +maxSm);
+    }
+    public static void main(String[] args) {
+        int number[] = {1,-2,6,-1,3};
+        kadanes(number);
+    }
+}
