@@ -1,0 +1,22 @@
+package Arrays;
+/*Question01 = Given an integer arraynums, return true if any value appears 
+at least twice int the array, and return false if every element is distinct.*/
+
+public class Question01{
+    public static boolean checkDuplicate (int array[]) {
+        for (int i=0; i<array.length-1; i++) {
+            for (int j = i+1; j<array.length; j++){
+                if(array[i] == array[j]){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+    public static void main(String[] args) {
+        int nums[] = {1,2,3,4};
+        int nums2[] = {1,2,3,1};
+        System.out.println("Duplicate exists : "+ checkDuplicate(nums));
+        System.out.println("Duplicate exists : "+ checkDuplicate(nums2));
+    }
+}
