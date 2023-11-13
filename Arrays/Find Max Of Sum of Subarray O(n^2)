@@ -1,0 +1,35 @@
+   package Arrays;
+
+public class MaxSubarraySumN2 { //brut force t = O (n^2)
+    public static void maxSubarraySum(int number[]) {
+        int sum = 0;
+        int maxSum = Integer.MIN_VALUE;
+        int prefix[] = new int[ number.length];
+
+        prefix[0] = number[0];
+        //calulate prefic array sum
+        for(int i = 1; i < prefix.length; i++){
+            prefix[i] = prefix[i-1] + number[i];
+        }
+
+        for (int i = 0; i < number.length; i++) {
+            int start = i;
+            //System.out.println("SubArray are: ");
+            for (int j = i; j < number.length; j++) {
+                int end = j;
+                sum = start == 0 ? prefix[end] : prefix[end] - prefix[start - 1];
+                
+                System.out.println("  Sum is : " + sum);
+                if (maxSum < sum) {
+                    maxSum = sum;
+                }      
+            }
+        }
+        System.out.println("Max of SubArray : " + maxSum);
+    }
+   
+     public static void main(String[] args) {
+        int number[] = {1,-2,6,-1,3};
+        maxSubarraySum  (number);
+    }
+}
