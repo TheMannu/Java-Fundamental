@@ -1,0 +1,39 @@
+package Arrays;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.LinkedHashSet;
+import java.util.List;
+
+public class Question05 {
+    public static List<List<Integer>> threeSum(int nums[]) {
+        List<List<Integer>> result = new ArrayList<List<Integer>>() ;
+
+        for(int i=0; i<nums.length; i++) {
+            for(int j=i+1; j<nums.length; j++ ) {
+                for (int k = j+1; k<nums.length; k++) {
+                    if(nums[i] + nums[j] + nums[k] == 0) {
+                        List<Integer> triplets = new ArrayList<Integer>();
+
+                        triplets.add(nums[i]);
+                        triplets.add(nums[j]);
+                        triplets.add(nums[k]);
+                        Collections.sort(triplets);
+                        result.add(triplets);
+                    }
+                }
+            }
+        }
+        result = new ArrayList<List<Integer>> (new LinkedHashSet<List<Integer>> (result));
+        return result;
+    }
+    public static void main(String[] args) {
+        int number01[] = {-1,0,1,2,-1,-4};
+        int number02[] = {};
+        int number03[] = {0};
+
+        System.out.println("Triplets for 1st are : "+threeSum(number01));
+        System.out.println("Triplets for 2nd are : "+threeSum(number02));
+        System.out.println("Triplets for 3rd are : "+threeSum(number03));
+    }
+}
