@@ -1,0 +1,37 @@
+Questio. 03.
+Given an array of prices where price[i] is the price of a given stock on i^th day.
+ return the maximun profit you can achieve from this transection if cannot achieve any profit, return 0. 
+
+Answer..
+package Arrays;
+public class Question03 {
+    public static int buySellStocks(int price[]) {
+        int buyDay = 0;
+        int sellDay = 0;
+        int buyPrice = Integer.MAX_VALUE;
+        int maxProfit = 0;
+
+        for (int i = 0; i < price.length; i++) {
+            if (buyPrice < price[i]) {  // profit
+                int profit = price[i] - buyPrice;  // today's profit
+                if (profit > maxProfit) {
+                    maxProfit = profit;
+                    sellDay = i + 1;  // day to sell
+                }
+            } else {
+                buyPrice = price[i];
+                buyDay = i + 1;  // day to buy
+            }
+        }
+        System.out.println("Buy Day: " + buyDay + " Sell Day: " + sellDay);
+        return maxProfit;
+    }
+
+    public static void main(String[] args) {
+        int price01[] = {7, 1, 5, 3, 6, 4};
+        int price02[] = {7, 6, 4, 3, 1};
+
+        System.out.println("Max Profit "+buySellStocks( price01));
+        System.out.println("Max Profit "+buySellStocks( price02));
+    }
+}
